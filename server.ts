@@ -198,11 +198,11 @@ restoreOverwrittenFilesWithOriginals().then(() => {
     next()
   })
 
-  /* CSP header */
+  /* CSP header 
   app.use((req: Request, res: Response, next: NextFunction) => {
     res.append('Content-Security-Policy', "script-src 'self' http://cdnjs.cloudflare.com 'unsafe-hashes' 'sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc='")
     next()
-  })
+  })*/
 
   /* Remove duplicate slashes from URL which allowed bypassing subsequent filters */
   app.use((req: Request, res: Response, next: NextFunction) => {
